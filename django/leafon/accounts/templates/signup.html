@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+        }
+
+        h2{
+            margin-top: 30px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        form {border: 0px solid #f1f1f1;
+        width:50%;
+        margin-left: 25%;
+        }
+
+        input[type=text], input[type=password], input[type=email] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        align-items: center;
+        margin-inline-start: 40px;
+        }
+
+        button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        margin-left: 120px;
+        }
+
+        button:hover {
+        opacity: 0.8;
+        background-color: red;
+        }
+
+        .container {
+            margin-inline: 15%;
+            padding: 16px;
+            background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+        }
+
+        span.psw {
+        float: right;
+        padding-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Signup Form</h2>
+
+    <form action="login" method="POST">
+    {% csrf_token %}
+
+    <div class="container">
+    <label for="first_name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="first_name" required>
+    <br>
+    <label for="lname"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lname" required>
+    <br>
+    <label for="email"><b>Mail/Gmail   </b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+    <br> 
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <br>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <br>
+    <!-- <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Re-Enter Password" name="psw2" required> -->
+        
+    <button class=button>Login</button>
+    </div>
+    
+    </form>
+</body>
+</html>
